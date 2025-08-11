@@ -27,5 +27,3 @@ Pipeline script is [here](https://github.com/nhollingsworth/iron-ore-data-pipeli
 * Write a Terraform configuration to automate creation of infrastructure
 * Import existing infrastructure into Terraform and/or recreate from scratch using the Terraform configuration
 * Lock down the code repository to reduce the chances of accidental pipeline damage
-
-test
