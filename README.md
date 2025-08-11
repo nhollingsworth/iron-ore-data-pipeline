@@ -6,12 +6,12 @@ Allow me to demonstrate with an example. Let's use [data from an Iron Ore flotat
 
 ## Plan
 
-To do this I'm going to use Python to create an **Extract, Transform, Load, Transform (ETLT)** data pipeline on my local machine. 
+To do this I'm going to create an **Extract, Transform, Load (ETL)** data pipeline on my local machine. Once the data set is loaded into the data platform we can perform addition transformations on the data store itself.
 
 Once done I'll productionise the pipeline by porting it to a CI/CD system and creating Infrastructure as Code (IaC) to be able to stand up the infrastructure from scratch in a reliable and repeatable way.
 
 ### Steps
-#### Create the pipeline locally
+#### Create the pipeline locally using Python
 
 Pipeline script is [here](https://github.com/nhollingsworth/iron-ore-data-pipeline/blob/main/data-pipeline.py).
 
@@ -20,7 +20,12 @@ Pipeline script is [here](https://github.com/nhollingsworth/iron-ore-data-pipeli
 | ~**Extract**~ | ~[this dataset](https://www.kaggle.com/datasets/edumagalhaes/quality-prediction-in-a-mining-process/) from Kaggle using Kaggle API~ |
 | ~**Transform**~ |  ~using Python Pandas (set data types, removed duplicates)~|
 | **Load** | it into Snowflake|
-| **Transform** | further using a Snowflake task to run some SQL|
+
+#### Perform additional transformations on the data set
+
+|<!-- -->|<!-- -->|
+|:-|:-:|
+| **Transform** | further using SQL run by a Snowflake task |
   
 #### Productionise
 * Port the Python script + keys to GitHub actions (CI/CD)
